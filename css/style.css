@@ -17,3 +17,81 @@ body {
 }
 
 
+/******** Nav ********/
+
+.main-nav {
+    background: #161b2d;
+    z-index: 50;
+    line-height: 70px;
+    height: 70px;
+    padding: 0 50px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: block;
+}
+
+.headroom {
+    transition: transform 200ms linear;
+}
+
+.headroom--pinned {
+    transform: translateY(0%);
+}
+
+.headroom--unpinned {
+    transform: translateY(-100%);
+}
+
+.main-nav .logo {
+    position: relative;
+    bottom: 7px;
+    margin-right: 40px;
+    float: left;
+}
+
+.logo img {
+    width: 131px;
+}
+
+a {
+    color: #31a1ff;
+    text-decoration: none;
+}
+
+.main-nav a {
+    color: #fff;
+    display: block;
+    padding: 0;
+    line-height: 70px;
+}
+
+.main-nav a.page {
+    border-bottom: 3px solid #161b2d;
+    text-transform: uppercase;
+    margin-right: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    transition: .3s border-bottom;
+    
+}
+
+.main-nav a.page.active {
+    border-bottom: 3px solid #31a1ff;
+}
+
+.main-nav a.page:hover {
+    border-bottom: 3px solid #31a1ff;
+}
+
+.main-nav a {
+    line-height: 20px;
+    padding: 0 0 5px;
+    float: left;
+    margin-top: 25px;
+}
+
+
