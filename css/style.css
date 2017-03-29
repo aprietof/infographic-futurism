@@ -1,0 +1,19 @@
+@font-face {
+    font-family: DIN;
+    src: url(../fonts/DINRegular.ttf);
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "DIN", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #363636;
+    background-color: #FFF;
+}
+
+
