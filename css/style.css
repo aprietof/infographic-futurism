@@ -14,6 +14,8 @@ body {
     line-height: 1.42857;
     color: #363636;
     background-color: #FFF;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -304,6 +306,38 @@ p.boxed {
     width: 100%;
     height: auto;
 }
+
+
+/* Footer */
+
+footer {
+    background: #000;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 20px 30px;
+    overflow: hidden;
+}
+
+p.footer {
+    font-size: 23px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+    color: #FFF;
+    padding-top: 40px;
+}
+
+footer p {
+    color: #ccc;
+}
+
+p.mission {
+    color: #414c75;
+    font-size: 20px;
+    padding: 0 90px;
+}
+
+
 
 @media only screen and (max-width: 720px) {
     
