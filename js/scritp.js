@@ -10,7 +10,7 @@ $(document).ready(function(){
 
     if(currenPosition > lastScrollTop) {
         nav.removeClass("headroom--pinned").addClass("headroom--unpinned");
-    }else{
+    }else if (currenPosition > 100 || currenPosition > lastScrollTop){
         nav.removeClass("headroom--unpinned").addClass("headroom--pinned");
     }
       lastScrollTop = currenPosition;
