@@ -1,19 +1,38 @@
-$(document).ready(function(){
-    var lastScrollTop = 0;
+// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('#nav').outerHeight();
 
-  /* On Scroll
-  ---------------------------------------------------*/
-  $(window).scroll(function(){
-      
-    var currenPosition = $(this).scrollTop();
-    var nav = $('#nav');
+function hasScrolled() {
+    var st = $(this).scrollTop();
 
-    if(currenPosition > lastScrollTop) {
-        nav.removeClass("headroom--pinned").addClass("headroom--unpinned");
-    }else{
-        nav.removeClass("headroom--unpinned").addClass("headroom--pinned");
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+
+    if (st > lastScrollTop && st > navbarHeight){
+        $('#nav').removeClass("headroom--pinned").addClass("headroom--unpinned");
+    } else {
+        if(st + $(window).height() < $(document).height()) {
+            $('#nav').removeClass("headroom--unpinned").addClass("headroom--pinned");
+        }
     }
-      lastScrollTop = currenPosition;
-  });
 
-});
+    lastScrollTop = st;
+}
+
+
+$(document).ready(function(){
+    
+    $(window).scroll(function(event){
+        didScroll = true;
+    });
+
+    setInterval(function() {
+        if (didScroll) {
+            hasScrolled();
+            didScroll = false;
+        }
+    }, 250);
+})
+
