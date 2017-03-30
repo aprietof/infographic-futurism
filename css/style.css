@@ -363,4 +363,8 @@ p.mission {
     .main-nav a.page {
         display: none;
     }
+    
+    p.mission {
+        font-size: 15px;
+    }
 }
