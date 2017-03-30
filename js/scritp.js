@@ -15,10 +15,6 @@ $(document).ready(function(){
         }
         
         lastScrollTop = currenPosition;
-        
-        if(lastScrollTop < 100) {
-           nav.removeClass("headroom--unpinned").addClass("headroom--pinned"); 
-        }
     
     });
 
